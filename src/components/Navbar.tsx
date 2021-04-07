@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { memo, VFC } from 'react'
 import styled, { css } from 'styled-components'
 import { Link } from 'react-router-dom'
+import { FaBars } from 'react-icons/fa'
+
 import { Button } from './Button/Button'
 import { menuData } from '../data/MenuData'
-import { FaBars } from 'react-icons/fa'
 
 const SNav = styled.nav`
     width: 100%;
@@ -13,10 +14,10 @@ const SNav = styled.nav`
     padding: 1rem 2rem;
     z-index: 100;
     position: fixed;
-    background-color: red;
 `
 const NavLink = css`
     color: #fff;
+    font-size: 1.4rem;
     display: flex;
     align-items: center;
     padding: 0 1rem;
@@ -62,12 +63,17 @@ const SNavBtn = styled.div`
     }
 `
 
+//props型定義
+type Props = {
+    toggle: () => void;
+}
 
-export const Navbar = () => {
+export const Navbar: VFC<Props> = memo((props) => {
+    const { toggle } = props
     return (
         <SNav>
             <SLogo to='/'>TRAVEL</SLogo>
-            <SMenuBars />
+            <SMenuBars onClick={toggle}/>
             <SNavMenu>
                 {menuData.map((path, index) => (
                     <>
@@ -82,4 +88,4 @@ export const Navbar = () => {
             </SNavBtn>
         </SNav>
     )
-}
+})
