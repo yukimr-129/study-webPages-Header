@@ -51,7 +51,7 @@ export const Cards: VFC<Props>  = (props) => {
     const { CardData1, CardData2 } = props
     return (
         <SCards>
-            <h1>Check out these EPIC Destinations!</h1>
+            <h1>おすすめの国内旅行からPick Up!</h1>
             <SCardsContainer>
                 <SCardsWrapper>
                     <SCardsItems>

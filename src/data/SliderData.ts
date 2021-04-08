@@ -9,36 +9,36 @@ import ImageEight from '../images/tourist-4.jpg'
 
 export const sliderData = [
     {
-        title: 'Luxury Villa in Bali',
-        plan: '￥12,000',
+        title: 'How are you feeling now Bali?',
+        plan: '￥100,000',
         path:'/home',
-        label: 'View Home',
+        label: 'View Plan',
         image: ImageOne,
-        alt: 'ダミー'
+        alt: 'Bali'
     },
     {
-        title: 'Luxury Villa in Bali',
-        plan: '￥12,000',
+        title: 'How are you feeling now Bosnia?',
+        plan: '￥80,000',
         path:'/home',
-        label: 'View Home',
+        label: 'View Plan',
         image: ImageTwo,
-        alt: 'ダミー'
+        alt: 'Bosnia'
     },
     {
-        title: 'Luxury Villa in Bali',
-        plan: '￥12,000',
+        title: 'How are you feeling now Italy?',
+        plan: '￥200,000',
         path:'/home',
-        label: 'View Home',
+        label: 'View Plan',
         image: ImageThree,
-        alt: 'ダミー'
+        alt: 'Italy'
     },
     {
-        title: 'Luxury Villa in Bali',
-        plan: '￥12,000',
+        title: 'Luxury Villa in Hawaii?',
+        plan: '￥150,000',
         path:'/home',
-        label: 'View Home',
+        label: 'View Plan',
         image: ImageFour,
-        alt: 'ダミー'
+        alt: 'Hawaii'
     }
 ]
 
@@ -47,7 +47,7 @@ export const sliderDataTwo = [
         title: 'Luxury Villa in Bali',
         plan: '￥12,000',
         path:'/home',
-        label: 'View Home',
+        label: 'View Plan',
         image: ImageFive,
         alt: 'ダミー'
     },
@@ -55,7 +55,7 @@ export const sliderDataTwo = [
         title: 'Luxury Villa in Bali',
         plan: '￥12,000',
         path:'/home',
-        label: 'View Home',
+        label: 'View Plan',
         image: ImageSix,
         alt: 'ダミー'
     },
@@ -63,7 +63,7 @@ export const sliderDataTwo = [
         title: 'Luxury Villa in Bali',
         plan: '￥12,000',
         path:'/home',
-        label: 'View Home',
+        label: 'View Plan',
         image: ImageSeven,
         alt: 'ダミー'
     },
@@ -71,7 +71,7 @@ export const sliderDataTwo = [
         title: 'Luxury Villa in Bali',
         plan: '￥12,000',
         path:'/home',
-        label: 'View Home',
+        label: 'View Plan',
         image: ImageEight,
         alt: 'ダミー'
     }
