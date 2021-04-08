@@ -1,10 +1,13 @@
 import React, { useCallback, useState } from 'react';
-// import '../App.css';
+import { CardData1, CardData2 } from '../data/CardData';
+import { InfoData } from '../data/InfoData';
 
 import { sliderData } from '../data/SliderData';
 import GlobalStyle from '../styles/globalStyles';
+import { Cards } from './Cards ';
 import { Dropdown } from './Dropdown';
 import { Hero } from './Hero';
+import { InfoSection } from './InfoSection';
 import { Navbar } from './Navbar';
 
 
@@ -23,6 +26,8 @@ const App = () => {
       <Navbar toggle={toggle} />
       <Dropdown isOpen={isOpen} toggle={toggle} />
       <Hero slides={sliderData} />
+      <InfoSection InfoData={InfoData}/>
+      <Cards CardData1={CardData1} CardData2={CardData2}/>
     </>
   );
 }
