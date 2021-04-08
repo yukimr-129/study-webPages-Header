@@ -33,7 +33,7 @@ export const sliderData = [
         alt: 'Italy'
     },
     {
-        title: 'Luxury Villa in Hawaii?',
+        title: 'How are you feeling now Hawaii?',
         plan: '￥150,000',
         path:'/home',
         label: 'View Plan',
