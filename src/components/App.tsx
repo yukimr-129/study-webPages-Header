@@ -6,6 +6,7 @@ import { sliderData } from '../data/SliderData';
 import GlobalStyle from '../styles/globalStyles';
 import { Cards } from './Cards ';
 import { Dropdown } from './Dropdown';
+import { Footer } from './Footer';
 import { Hero } from './Hero';
 import { InfoSection } from './InfoSection';
 import { Navbar } from './Navbar';
@@ -28,6 +29,7 @@ const App = () => {
       <Hero slides={sliderData} />
       <InfoSection InfoData={InfoData}/>
       <Cards CardData1={CardData1} CardData2={CardData2}/>
+      <Footer />
     </>
   );
 }

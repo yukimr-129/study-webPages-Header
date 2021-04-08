@@ -1,120 +1,171 @@
-import React from 'react';
-import './Footer.css';
+import { FaFacebookSquare, FaInstagramSquare, FaTwitterSquare, FaYoutubeSquare } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import styled, { css } from 'styled-components';
+import { Button } from './Button/Button';
+
+const SFooterContainer = styled.div`
+    background-color: #242424;
+    padding: 4rem 0 2rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+`
+const SFooterSubscription = styled.section`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 24px;
+    padding: 24px;
+    color: #fff;
+`
+const SFooterLinks = styled.div`
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+
+    @media screen and (max-width: 768px) {
+        padding-top: 2rem;
+    }
+`
+const SFooterLinkWrapper = styled.div`
+    display: flex;
+
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+    }
+`
+const SFooterLinkItems = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 16px;
+    width: 200px;
+    height: 220px;
+    box-sizing: border-box;
+
+    &:hover {
+        color: #e9e9e9;
+        transition: 0.3s ease-out;
+    }
+
+    h2 {
+        margin-bottom: 16px;
+        color: #fff;
+    }
+
+    @media screen and (max-width: 768px) {
+        margin-bottom: 8px;
+        align-items: center;
+    }
+`
+const SFooterLinkItemsText = styled(Link)`
+    color: #fff;
+    text-decoration: none;
+
+    &:hover {
+        color: teal;
+        transition: 0.3s ease-out;
+    }
+`
+const SSocialMedia = styled.section`
+    max-width: 1000px;
+    width: 100%;
+`
+const SSocialMediaWrap = styled.div`
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto 0 auto;
+
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+    }
+`
+const SWebsiteRights = styled.small`
+    color: #fff;
+    margin-bottom: 16px;
+`
+const SSocialIcons = styled.div`
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 240px;
+`
+
+const SSocialIconLink = styled(Link)`
+    color: #fff;
+    font-size: 24px;
+`
 
 export const  Footer = () => {
   return (
-      <>
-      </>
-    // <div className='footer-container'>
-    //   <section className='footer-subscription'>
-    //     <p className='footer-subscription-heading'>
-    //       Join the Adventure newsletter to receive our best vacation deals
-    //     </p>
-    //     <p className='footer-subscription-text'>
-    //       You can unsubscribe at any time.
-    //     </p>
-    //     <div className='input-areas'>
-    //       <form>
-    //         <input
-    //           className='footer-input'
-    //           name='email'
-    //           type='email'
-    //           placeholder='Your Email'
-    //         />
-    //         <Button buttonStyle='btn--outline'>Subscribe</Button>
-    //       </form>
-    //     </div>
-    //   </section>
-    //   <div class='footer-links'>
-    //     <div className='footer-link-wrapper'>
-    //       <div class='footer-link-items'>
-    //         <h2>About Us</h2>
-    //         <Link to='/sign-up'>How it works</Link>
-    //         <Link to='/'>Testimonials</Link>
-    //         <Link to='/'>Careers</Link>
-    //         <Link to='/'>Investors</Link>
-    //         <Link to='/'>Terms of Service</Link>
-    //       </div>
-    //       <div class='footer-link-items'>
-    //         <h2>Contact Us</h2>
-    //         <Link to='/'>Contact</Link>
-    //         <Link to='/'>Support</Link>
-    //         <Link to='/'>Destinations</Link>
-    //         <Link to='/'>Sponsorships</Link>
-    //       </div>
-    //     </div>
-    //     <div className='footer-link-wrapper'>
-    //       <div class='footer-link-items'>
-    //         <h2>Videos</h2>
-    //         <Link to='/'>Submit Video</Link>
-    //         <Link to='/'>Ambassadors</Link>
-    //         <Link to='/'>Agency</Link>
-    //         <Link to='/'>Influencer</Link>
-    //       </div>
-    //       <div class='footer-link-items'>
-    //         <h2>Social Media</h2>
-    //         <Link to='/'>Instagram</Link>
-    //         <Link to='/'>Facebook</Link>
-    //         <Link to='/'>Youtube</Link>
-    //         <Link to='/'>Twitter</Link>
-    //       </div>
-    //     </div>
-    //   </div>
-    //   <section class='social-media'>
-    //     <div class='social-media-wrap'>
-    //       <div class='footer-logo'>
-    //         <Link to='/' className='social-logo'>
-    //           TRVL
-    //           <i class='fab fa-typo3' />
-    //         </Link>
-    //       </div>
-    //       <small class='website-rights'>TRVL © 2020</small>
-    //       <div class='social-icons'>
-    //         <Link
-    //           class='social-icon-link facebook'
-    //           to='/'
-    //           target='_blank'
-    //           aria-label='Facebook'
-    //         >
-    //           <i class='fab fa-facebook-f' />
-    //         </Link>
-    //         <Link
-    //           class='social-icon-link instagram'
-    //           to='/'
-    //           target='_blank'
-    //           aria-label='Instagram'
-    //         >
-    //           <i class='fab fa-instagram' />
-    //         </Link>
-    //         <Link
-    //           class='social-icon-link youtube'
-    //           to='/'
-    //           target='_blank'
-    //           aria-label='Youtube'
-    //         >
-    //           <i class='fab fa-youtube' />
-    //         </Link>
-    //         <Link
-    //           class='social-icon-link twitter'
-    //           to='/'
-    //           target='_blank'
-    //           aria-label='Twitter'
-    //         >
-    //           <i class='fab fa-twitter' />
-    //         </Link>
-    //         <Link
-    //           class='social-icon-link twitter'
-    //           to='/'
-    //           target='_blank'
-    //           aria-label='LinkedIn'
-    //         >
-    //           <i class='fab fa-linkedin' />
-    //         </Link>
-    //       </div>
-    //     </div>
-    //   </section>
-    // </div>
+    <SFooterContainer>
+      <SFooterLinks>
+        <SFooterLinkWrapper>
+          <SFooterLinkItems>
+            <h2>About Us</h2>
+            <SFooterLinkItemsText to='/sign-up'>サイトの使い方</SFooterLinkItemsText>
+            <SFooterLinkItemsText to='/'>お客様の声</SFooterLinkItemsText>
+            <SFooterLinkItemsText to='/'>利用規約</SFooterLinkItemsText>
+          </SFooterLinkItems>
+          <SFooterLinkItems>
+            <h2>Contact Us</h2>
+            <SFooterLinkItemsText to='/'>お問い合わせ</SFooterLinkItemsText>
+            <SFooterLinkItemsText to='/'>サポート</SFooterLinkItemsText>
+            <SFooterLinkItemsText to='/'>スポンサーシップ</SFooterLinkItemsText>
+          </SFooterLinkItems>
+          <SFooterLinkItems>
+            <h2>Social Media</h2>
+            <SFooterLinkItemsText to='/'>Instagram</SFooterLinkItemsText>
+            <SFooterLinkItemsText to='/'>Facebook</SFooterLinkItemsText>
+            <SFooterLinkItemsText to='/'>Youtube</SFooterLinkItemsText>
+            <SFooterLinkItemsText to='/'>Twitter</SFooterLinkItemsText>
+          </SFooterLinkItems>
+        </SFooterLinkWrapper>
+      </SFooterLinks>
+      <SSocialMedia>
+        <SSocialMediaWrap>
+          <SWebsiteRights>TRVL © 2020</SWebsiteRights>
+          <SSocialIcons>
+            <SSocialIconLink
+              to='/'
+              target='_blank'
+              aria-label='Facebook'
+            >
+              <FaFacebookSquare />
+            </SSocialIconLink>
+            <SSocialIconLink
+              to='/'
+              target='_blank'
+              aria-label='Instagram'
+            >
+              <FaInstagramSquare />
+            </SSocialIconLink>
+            <SSocialIconLink
+              to='/'
+              target='_blank'
+              aria-label='Youtube'
+            >
+              <FaYoutubeSquare />
+            </SSocialIconLink>
+            <SSocialIconLink
+              to='/'
+              target='_blank'
+              aria-label='Twitter'
+            >
+              <FaTwitterSquare />
+            </SSocialIconLink>
+          </SSocialIcons>
+        </SSocialMediaWrap>
+      </SSocialMedia>
+    </SFooterContainer>
   )
 }
 

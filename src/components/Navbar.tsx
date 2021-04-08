@@ -14,9 +14,14 @@ const SNav = styled.nav`
     padding: 1rem 2rem;
     z-index: 100;
     position: fixed;
+    background-color:rgba(255,255,255,0.8);
+
+    @media screen and (max-width: 768px) {
+        background-color: transparent;
+    }
 `
 const NavLink = css`
-    color: #fff;
+    color: #767676;
     font-size: 1.4rem;
     display: flex;
     align-items: center;
@@ -51,6 +56,10 @@ const SNavMenu = styled.div`
 `
 const SNavMenuLInk = styled(Link)`
     ${NavLink}
+
+    &:hover {
+        color: #111;
+    }
 `
 
 const SNavBtn = styled.div`
